@@ -1,9 +1,11 @@
-function calculateShippingCost() {
-  let totalPrice = 19;
+let totalPrice;
+
+function calculateShippingCost(price) {
+
   let shippingCost;
-  if (totalPrice <= 10) {
+  if (price <= 10) {
     shippingCost = 5;
-  } else if (totalPrice <= 20) {
+  } else if (price <= 20) {
     shippingCost = 3;
   } else {
     shippingCost = 0;
@@ -12,4 +14,6 @@ function calculateShippingCost() {
   console.log(`Shipping cost for you is ${shippingCost}`);
 }
 
-calculateShippingCost();
+
+totalPrice = 19;
+calculateShippingCost(totalPrice);
